@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+/* C:\SOLANA PROJETOS\PROJETO INSANO\app\src\App.css */
+
+.App{
+  width: 100%;
+  height: 100vh;
+  background-image: url('./fundo.png');
+  background-color: rgb(83, 51, 3);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%; /* Alterado para cover para melhor adaptação ao zoom */
+  transform-origin: center 42%; /* Ajustado para um ponto mais alto */
+  overflow: hidden; /* Evita que elementos escalados ultrapassem a tela */
+  transition: all 0.5s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Estilos para o botão de zoom */
+.zoom-button {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2000; /* Garante que o botão fique acima de outros elementos */
+  transition: background-color 1s ease;
+  transform: translate(-50%, -50%);
 }
 
-.App-link {
-  color: #61dafb;
+.zoom-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+body{
+  overflow: hidden;
 }
+
